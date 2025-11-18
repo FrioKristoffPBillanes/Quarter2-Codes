@@ -32,7 +32,7 @@ def finalization():
             destchange -= 1
             if dests[destchange] == newdest:
                 print("That is already your destination.")
-                exit()
+                finalization()
             dests[destchange] = newdest
             finalization()
         if change == "add":
@@ -52,4 +52,5 @@ def finalization():
         else:
             print("Please answer with 'change', 'add', or 'remove'.")
             finalization()
+
 finalization()
